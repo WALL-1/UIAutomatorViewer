@@ -17,6 +17,7 @@ from setuptools import setup
     https://setuptools.readthedocs.io/en/latest/references/keywords.html
     https://packaging.python.org/tutorials/packaging-projects/#setup-args
     https://blog.csdn.net/xujing19920814/article/details/80374360
+    https://zhuanlan.zhihu.com/p/276461821?native.theme=0
 
 备注：
     需要setuptools工具配合twine工具才能使用markdown文档
@@ -29,7 +30,7 @@ desc_doc = 'README.md'
 
 setup(
     name='UIAutomatorViewer',
-    version='0.0.1',
+    version='0.0.3',
     author='Jinghe Lee',
     author_email='jinghe_lee@163.com',
     url='https://github.com/JingheLee/UIAutomatorViewer.git',
@@ -37,7 +38,15 @@ setup(
         'flask',
         'uiautomator2'
     ],
+    include_package_data = True,
     packages=['UIAutomatorViewer'],
+    py_modules=['.main'],
+    # scripts=['main.py'],
+     entry_points={
+        'console_scripts': [
+            'uiautomatorviewer = main:start'
+        ]
+    },
     description='一个基于Python实现的UIAutomatorViewer,比Android原生的UIAutomatorViewer要稳定和方便一些。',
     long_description_content_type='text/markdown',
     long_description=open(desc_doc, encoding='utf-8').read(),

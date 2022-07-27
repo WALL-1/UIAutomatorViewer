@@ -9,3 +9,7 @@ pip install UIAutomatorViewer
 ```
 
 #### 使用说明
+命令行执行以下命令会自动在浏览器打开UIAutomatorViewer工具
+```
+$ uiautomatorviewer
+```
