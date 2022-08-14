@@ -72,8 +72,7 @@ def call(func):
             cmd += '(**{})'.format(kwargs)
         else:
             cmd += '(*{},**{})'.format(args,kwargs)
-            
-        print(cmd)
+
         result = eval(cmd)
     else:
         result = func_obj
