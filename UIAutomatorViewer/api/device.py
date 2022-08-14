@@ -34,6 +34,9 @@ def dump():
         return response.make(status=-1,code=400000,message='Device offline')
 
     hierarchy_xml = device.dump_hierarchy()
+    screenshot_dir = os.path.join(current_app.static_folder,'screenshots')
+    if not os.path.exists(screenshot_dir):
+        os.makedirs(screenshot_dir)
     screenshot_path = os.path.join('screenshots','window.png').replace('\\','/')
     screenshot_path_full = os.path.join(current_app.static_folder,screenshot_path)
     if os.path.exists(screenshot_path_full):

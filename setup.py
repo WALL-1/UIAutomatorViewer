@@ -30,7 +30,7 @@ desc_doc = 'README.md'
 
 setup(
     name='UIAutomatorViewer',
-    version='0.0.3',
+    version='0.0.4',
     author='Jinghe Lee',
     author_email='jinghe_lee@163.com',
     url='https://github.com/JingheLee/UIAutomatorViewer.git',
