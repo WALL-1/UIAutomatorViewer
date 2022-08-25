@@ -56,7 +56,7 @@ def dump():
 def call(func):
     device = get_device()
     payload = request.get_json()
-    current_app.logger.debug(payload)
+    # current_app.logger.debug(payload)
     func_obj = getattr(device,func)
     if callable(func_obj):
         selectors = payload.get('selectors',dict())
